@@ -208,9 +208,7 @@ exports.default = function () {
           'div',
           null,
           _react2.default.createElement(
-            'a',
-            { href: 'http://uxdb.galeano.co/' },
-            'galeano'
+            'a'
           )
         ),
         _react2.default.createElement(_reactStaticRoutes2.default, null)
@@ -400,7 +398,7 @@ var templateMap = {
 
   // Get template for given path
 };var getComponentForPath = function getComponentForPath(path) {
-  var parts = path === '/' ? ['/'] : path.split('/').filter(function (d) {
+  var parts = path === '/uxdb/' ? ['/uxdb/'] : path.split('/uxdb/').filter(function (d) {
     return d;
   });
   var cursor = templateTree;
@@ -1011,7 +1009,7 @@ exports.default = function (_ref) {
           'ul',
           { className: 'pure-menu-list process-list' },
           routes.map(function (routeName) {
-            var routePath = routeName === "Benchmark" ? "/" : '/' + routeName.toLowerCase();
+            var routePath = routeName === "Benchmark" ? "/" : '/uxdb/' + routeName.toLowerCase();
 
             return _react2.default.createElement(
               'li',
